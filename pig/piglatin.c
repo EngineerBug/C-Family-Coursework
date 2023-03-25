@@ -2,7 +2,10 @@
 #include "pig.c"
 
 /**
- * Will ask the user for a sentance.
+ * Repeatedly asks the user for a sentance in English
+ * Prints the same sentance in pig latin
+ * 
+ * Will continue until the user enters a blank line
  * 
 */
 int main() {

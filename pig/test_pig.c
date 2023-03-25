@@ -1,6 +1,10 @@
 #include "pig.h"
 #include "pig.c"
 
+
+/**
+ * Prints and asserts that every testing word creates the expected pig latin word.
+*/
 int main(){
     /*create an array of words*/
     char * words[] = {"happy", "duck", "glove", "evil", "eight", "yowler", "crystal",

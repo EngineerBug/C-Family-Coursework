@@ -1,7 +1,4 @@
-/*Program headers*/
 #include "beggar.h"
-
-
 
 /*Function prototypes*/
 /*CREATION*/
@@ -12,7 +9,6 @@ void freeQueue(QUEUE*);
 void push(QUEUE*, int);
 int pop(QUEUE*);
 void queueMove(QUEUE*, QUEUE*);
-void queueCpy(QUEUE*, QUEUE*);
 /*INFORMATION*/
 void toString(QUEUE*);
 int length(QUEUE*);
@@ -30,7 +26,7 @@ QUEUE * createQueue(){
     return newQueue;
 }
 
-/*Create a new node*/
+/*Create a new node with an integer element*/
 NODE * createNode(int element){
     /*Create a node with enough memory to store the int and pointer.*/
     NODE * newNode = malloc(sizeof(NODE));
@@ -49,7 +45,6 @@ NODE * createNode(int element){
  * While there is still a node in the queue.
  *      Free the current node.
  *      Store the next node.
- * Free the last node.
  * Free the queue.
  * 
  * @param queue the queue to free
@@ -73,7 +68,7 @@ void freeQueue(QUEUE * queue){
  * Adds an element into the end of a queue.
  * 
  * If the queue is empty, update the head of the queue.
- * Iterate through each element until one does not point to an element.
+ * Else, update the tail of the queue.
  * Create a new node and assign the previous last element to point to it.
  * 
  * @param queue the queue to add the element to
@@ -156,33 +151,13 @@ void queueMove(QUEUE * bin, QUEUE * src){
     src->tail = NULL;
 }
 
-/**
- * Appends the contents of one queue to another.
- * Will note empty the src queue.
- * 
- * @param src the source queue
- * @param bin the target queue
- * 
-*/
-void queueCpy(QUEUE * bin, QUEUE * src){
-    if(src->head){
-        NODE * currentNode = src->head;
-        push(bin, currentNode->element);
-
-        while(currentNode->element){
-            currentNode = currentNode->nextElement;
-            push(bin, currentNode->element);
-        }
-    }
-}
-
 /*INFORMATION*/
 
 /**
  * Look through each node until one doesn't point to another node.
  * 
- * Check if the queue exists (is not null).
- * Check if the queue is empty.
+ * If the queue has not been created, len=0.
+ * If the queue is empty, len=0.
  * 
  * Iterate through each node until there is no next element.
  * 
@@ -204,7 +179,8 @@ int length(QUEUE * queue){
 
 /**
  * Print the contents of the queue.
- * Starts at the oldest element and prints each element until there is no next element.
+ * If there is no head, print "EMPTY"
+ * Starts at the head element and prints each element until there is no next element.
  * 
  * @param queue the queue to print
 */

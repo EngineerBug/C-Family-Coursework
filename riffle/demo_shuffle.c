@@ -3,6 +3,13 @@
 #include "riffle.c"
 
 /*main function*/
+/**
+ * Create an array of strings and an array of integers
+ * 
+ * Riffle both arrays and print the output.
+ * 
+ * Use assertions to test the remaining functions in riffle.c
+*/
 int main(){
     /*create arrays to run tests on*/
     int L[20] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};

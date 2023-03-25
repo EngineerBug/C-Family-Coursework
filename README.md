@@ -1,4 +1,4 @@
-# C-Family Coursework - student number - exam number
+# C-Family Coursework
 
 ### Compiling and Executing
 

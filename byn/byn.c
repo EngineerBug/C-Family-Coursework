@@ -32,6 +32,11 @@ int main(int argc, char ** argv){
         for(i=2; i<=Nplayers; i++){
             STAT stats = statistics(i, games);
             printf("%d: s %d, a %f, l %d\n", i, stats.shortest, stats.average, stats.longest);
+
+            /*write to an output file*/
+            FILE * f = fopen("statistics.txt", "a");
+            fprintf(f, "%d: s %d, a %f, l %d\n", i, stats.shortest, stats.average, stats.longest);
+            fclose(f);
         }
     } else {
         printf("Please enter [Nplayers > 1] and [games > 99] when executing.\n");

@@ -14,6 +14,7 @@ int main(){
     int i;
     for(i = 0; i<14; i++){
         char * piggy = pig(words[i]);
+        printf("%s => %s\n", words[i], piggy);
         assert(strcmp(piggy, pigWords[i]) == 0);
         free(piggy);
     }

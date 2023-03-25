@@ -37,5 +37,7 @@ C-CARD-GAME
     - single.c (executes one game of byn)
     - byn.c (executes y games of byn to calculate the average number of turns with 1-x players)
     - Makefile (used to compile and link the programs)
+    - statistics.txt (stores the output of byn.c)
 - compile.sh (used ot compile and run all the code in one go)
 - (quality.txt) (the output from quality.c when run by compile.sh)
+- (statistics.txt) (the output from byn.c when run by compile.sh)

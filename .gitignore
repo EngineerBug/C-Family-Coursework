@@ -4,4 +4,6 @@
 
 # Ingore output files
 quality.txt
-*/quality.txt
+riffle/quality.txt
+statistics.txt
+byn/statistics.txt

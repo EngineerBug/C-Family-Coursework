@@ -37,10 +37,14 @@ int main(){
     /*print the results to the output file if it exists*/
     if(file){
         fprintf(file, "I think that %d is the best number of shuffles.\n", shuffles);
-        fprintf(file, "This is because it returned: %f\n", best);
+        fprintf(file, "This is because it returned: %f\n\n", best);
+        fprintf(file, "According to Bayer and Diaconis (1992) the optimal number of riffles is 7 with a 52 card deck.\n");
+        fprintf(file, "https://statweb.stanford.edu/~cgates/PERSI/papers/bayer92.pdf\n");
     } else {
         printf("I think that %d is the best number of shuffles.\n", shuffles);
         printf("This is because it returned: %f\n", best);
+        printf("According to Bayer and Diaconis (1992) the optimal number of riffles is 7 with a 52 card deck.\n");
+        printf("https://statweb.stanford.edu/~cgates/PERSI/papers/bayer92.pdf\n");
     }
 
     /*close the file*/

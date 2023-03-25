@@ -1,17 +1,20 @@
-1: 0.469388
-2: 0.510204
-3: 0.517007
-4: 0.586735
-5: 0.571429
-6: 0.554422
-7: 0.553936
-8: 0.563775
-9: 0.562358
-10: 0.561224
-11: 0.573284
-12: 0.569728
-13: 0.565149
-14: 0.564140
-15: 0.586395
-I think that 1 is the best number of shuffles.
-This is because it returned: 0.469388
+1: 0.612245
+2: 0.622449
+3: 0.557823
+4: 0.596939
+5: 0.604082
+6: 0.581633
+7: 0.588921
+8: 0.604592
+9: 0.612245
+10: 0.604082
+11: 0.597403
+12: 0.610544
+13: 0.612245
+14: 0.610787
+15: 0.608163
+I think that 3 is the best number of shuffles.
+This is because it returned: 0.557823
+
+According to Bayer and Diaconis (1992) the optimal number of riffles is 7 with a 52 card deck.
+https://statweb.stanford.edu/~cgates/PERSI/papers/bayer92.pdf

@@ -4,4 +4,4 @@
 
 # Ingore output files
 quality.txt
-riffle/quality.txt
+*/quality.txt

@@ -60,7 +60,6 @@ STAT statistics(int Nplayers, int games){
     STAT stats = initStat(beggar(Nplayers, deck, 0));
 
     /*play the games (1 has already been played)*/
-    int i;
     for(i=2; i<games; i++){
         int newvalue = beggar(Nplayers, deck, 0);
 

@@ -18,7 +18,8 @@ int main(){
     int shuffles = 0;
 
     /*run the quality tests*/
-    for(int i=1; i<=15; i++){
+    int i;
+    for(i=1; i<=15; i++){
         float quality = average_quality(50, 30, i);
         /*if the quality improves, update the best guess*/
         if((quality > 0.5 && quality < best) || (quality < 0.5 && quality < best)){

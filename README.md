@@ -14,9 +14,7 @@ In addition the command 'valgrind --leak-check=yes ./executable_name' will check
 
 ### Reading
 
-The project is split into the following structure.
-
-Files are organised into the order from most seperated from the user to least (i.e. the user would call Makefile, which calls byn.c and single.c which both call beggar.c ect. Folders are organised by the order they were completed
+The project is split into the following structure:
 
 C-CARD-GAME
 - pig

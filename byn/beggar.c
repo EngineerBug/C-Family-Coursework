@@ -131,7 +131,8 @@ bool finished(QUEUE ** players, int Nplayers){
 */
 bool take_turn(QUEUE * player, QUEUE * pile){
     /*pay the penatly until the indicated number of card, or until another penalty card is played*/
-    for(int i=10; i < pile->tail->element; i++){
+    int i;
+    for(i=10; i < pile->tail->element; i++){
         push(pile, pop(player));
         /*has a penalty card just been put down?*/
         if(pile->tail->element > 10) return false;

@@ -28,7 +28,8 @@ int main(int argc, char ** argv){
         int games = atoi(argv[2]);
 
         /*play games*/
-        for(int i=2; i<=Nplayers; i++){
+        int i;
+        for(i=2; i<=Nplayers; i++){
             STAT stats = statistics(i, games);
             printf("%d: s %d, a %f, l %d\n", i, stats.shortest, stats.average, stats.longest);
         }
@@ -52,13 +53,15 @@ int main(int argc, char ** argv){
 STAT statistics(int Nplayers, int games){
     /*create the deck of cards*/
     int * deck = malloc(sizeof(int)*52);
-    for(int i=0; i<52; i++) deck[i] = i;
+    int i;
+    for(i=0; i<52; i++) deck[i] = i;
 
     /*initialise the stats*/
     STAT stats = initStat(beggar(Nplayers, deck, 0));
 
     /*play the games (1 has already been played)*/
-    for(int i=2; i<games; i++){
+    int i;
+    for(i=2; i<games; i++){
         int newvalue = beggar(Nplayers, deck, 0);
 
         stats.average += newvalue;

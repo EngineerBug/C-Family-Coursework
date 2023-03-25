@@ -11,7 +11,8 @@ int main(){
                        "Appyhay", "uckDay", "ovEglay", "Evilway", "EIGHTway", "owlerYay", "Ystalcray"};
 
     /*test each word*/
-    for (int i = 0; i<14; i++){
+    int i;
+    for(i = 0; i<14; i++){
         char * piggy = pig(words[i]);
         assert(strcmp(piggy, pigWords[i]) == 0);
         free(piggy);

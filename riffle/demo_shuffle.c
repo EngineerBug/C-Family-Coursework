@@ -23,7 +23,7 @@ int main(){
     /*check with strings*/
     riffle(greek, sizeof(greek)/sizeof(greek[0]), sizeof(greek[0]), 15);
     printf("Shuffled strings: ");
-    for(int i = 0; i < 12; i++){
+    for(i = 0; i < 12; i++){
         printf("%s ", greek[i]);
     }
     printf("\n");
